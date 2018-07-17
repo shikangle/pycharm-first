@@ -1,0 +1,47 @@
+from django.shortcuts import render
+# Create your views here.
+#写业务逻辑代码
+from django.shortcuts import HttpResponse
+
+
+def login(request):
+    return HttpResponse("<h1>hello</h1>")
+# def home(request):
+#     return HttpResponse('<h1>hello</h1>')
+
+# def login(request):
+#     #包含用户提价的所有信息
+#     #获取用户提交方式
+#     if request.method == "GET":
+#         #获取用户提交的数据
+#         return render(request,'loginin.html')
+#     elif request.method == "POST":
+#         # u = request.POST.get('username')
+#         # p = request.POST.get('pwd')
+#         # if u =='alex'and p =='123':
+#         #     return redirect('/index/')
+#         # else:
+#         #     v = request.POST.get('favor')
+#         #     print(v)
+#         obj = request.FILES.get('fafafa')
+#         print(obj.type(obj),obj.name)
+#         import os
+#         file_path = os.path.join('upload',obj.name)
+#         f = open(file_path,mode='wb')
+#         for i in obj.chunks():
+#             f.write(i)
+#         f.close()
+#             return render(request,'loginin.html')
+#     else:
+#         return redirect('/index/')
+
+# # def home(request):
+# #     return HttpResponse('home')
+# from django.views import View
+# class Home(View):
+#    def get(self,request):
+#        pass
+#    def post(self,request):
+#        pass
+
+

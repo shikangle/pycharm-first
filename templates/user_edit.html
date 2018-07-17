@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .menu{
+            display: block;
+            padding: 5px ;
+        }
+        .wo{
+            line-height: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 48px;background-color: black;color: white;" class="wo">欢迎登陆系统</div>
+    <div>
+        <div style="position: absolute;top: 48px;bottom: 0;left: 0;width: 200px;background-color: aqua;">
+            <a href="/cmdb/user_info/"class="menu">用户管理</a>
+            <a href="/cmdb/user_group/"class="menu">用户管理</a>
+        </div>
+    </div>
+    <div style="position: absolute;top: 48px;left: 210px;bottom: 0;right: 0;overflow: hidden;"class="wo">
+        <h1>编辑 用户</h1>
+        <form action="/cmdb/useredit-{{ obj.id }}/" method="POST">
+            <input style="display: none;" type="text"name="id" placeholder="id" value="{{ obj.id }}">
+            <input type="text"name="username" placeholder="姓名" value="{{ obj.username }}">
+            <input type="password"name="password"placeholder="密码" value="{{ obj.password }}">
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</body>
+</html>
